@@ -30,6 +30,42 @@ To dive into Windows Subsystem for Linux
 
 ---
 
+# Why WSL?
+<!-- .slide: style="text-align: left;"> -->
+TBD
+
+---
+
+# History of WSL
+<!-- .slide: style="text-align: left;"> -->
+TBD
+
+---
+
+# WSL v1 vs WSL v2
+<!-- .slide: style="text-align: left;"> -->
+TBD
+
+---
+
+# WSL Pre-requisites
+<!-- .slide: style="text-align: left;"> -->
+TBD
+
+---
+
+# Installing WSL
+<!-- .slide: style="text-align: left;"> -->
+TBD
+
+---
+
+# Running WSL
+<!-- .slide: style="text-align: left;"> -->
+TBD
+
+---
+
 # Demos
 
 ---
