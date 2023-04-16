@@ -32,7 +32,10 @@ To dive into Windows Subsystem for Linux
 
 ## Why WSL?
 <!-- .slide: style="text-align: left;"> -->
-TBD
+- Take advantage of linux commands on Windows<br>
+- Run linux applications on Windows<br>
+- Build your own custom distros<br>
+- Docker Desktop back-end
 
 ---
 
