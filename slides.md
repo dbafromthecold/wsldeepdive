@@ -35,6 +35,7 @@ To dive into Windows Subsystem for Linux
 - Take advantage of linux commands on Windows<br>
 - Run linux applications on Windows<br>
 - Build your own custom distros<br>
+- Install SQL Server on Linux<br>
 - Docker Desktop back-end
 
 ---
@@ -76,11 +77,19 @@ https://learn.microsoft.com/en-us/windows/wsl/install-manual
 
 <pre><code>wsl --install -d Ubuntu-22.04</pre></code>
 
+Note - Ubuntu is installed by default if no distro specified
+
 ---
 
 ## Running WSL
 <!-- .slide: style="text-align: left;"> -->
-TBD
+List available local distros: -
+
+<pre><code>wsl --list</pre></code>
+
+Jump into a distro: -
+
+<pre><code>wsl -d Ubuntu-22.04</pre></code>
 
 ---
 
