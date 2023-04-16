@@ -44,7 +44,12 @@ TBD
 
 ## WSL v1 vs WSL v2
 <!-- .slide: style="text-align: left;"> -->
-TBD
+
+<p align="center">
+  <img src="images/wsl1_vs_wsl2.png" />
+</p>
+
+https://learn.microsoft.com/en-us/windows/wsl/compare-versions
 
 ---
 
@@ -67,6 +72,7 @@ TBD
 ---
 
 # Demos
+<!-- .slide: style="text-align: left;"> -->
 
 ---
 
