@@ -55,13 +55,23 @@ https://learn.microsoft.com/en-us/windows/wsl/compare-versions
 
 ## WSL Pre-requisites
 <!-- .slide: style="text-align: left;"> -->
-TBD
+Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 <br>
+<br>
+Earlier versions: - <br>
+https://learn.microsoft.com/en-us/windows/wsl/install-manual
+
 
 ---
 
 ## Installing WSL
 <!-- .slide: style="text-align: left;"> -->
-TBD
+<pre><code>wsl --list --online</pre></code>
+
+<p align="center">
+  <img src="images/wsl_available_distros.png" />
+</p>
+
+<pre><code>wsl --install -d Ubuntu-22.04</pre></code>
 
 ---
 
