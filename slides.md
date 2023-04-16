@@ -35,6 +35,7 @@ To dive into Windows Subsystem for Linux
 - Take advantage of linux commands on Windows<br>
 - Run linux applications on Windows<br>
 - Build your own custom distros<br>
+- Lighter than running a Linux VM locally<br>
 - Install SQL Server on Linux<br>
 - Docker Desktop back-end
 
