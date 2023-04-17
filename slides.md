@@ -94,6 +94,10 @@ Jump into a distro: -
 
 ---
 
+## Running Docker in WSL
+
+---
+
 # Demos
 <!-- .slide: style="text-align: left;"> -->
 
