@@ -306,7 +306,7 @@ Confirm: -
 ## Running SQL Server in WSL
 <!-- .slide: style="text-align: left;"> -->
 
-<pre><code>sudo apt update && sudo apt upgrade
+<pre><<code data-line-numbers="1|3|5|7|9">>sudo apt update && sudo apt upgrade
 	
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
