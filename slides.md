@@ -30,13 +30,6 @@ To dive into Windows Subsystem for Linux
 
 ---
 
-<p align="center">
-  <img src="images/wsl1_architecture_diagram.png" />
-</p>
-
-
----
-
 ## Why WSL?
 <!-- .slide: style="text-align: left;"> -->
 - Take advantage of linux commands on Windows<br>
@@ -62,6 +55,19 @@ TBD
 </p>
 
 https://learn.microsoft.com/en-us/windows/wsl/compare-versions
+
+---
+
+## WSL v1 architecture
+<!-- .slide: style="text-align: left;"> -->
+<p align="center">
+  <img src="images/wsl1_architecture_diagram.png" />
+</p>
+
+---
+
+## WSL v2 architecture
+<!-- .slide: style="text-align: left;"> -->
 
 ---
 
