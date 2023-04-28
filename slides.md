@@ -79,8 +79,7 @@ https://learn.microsoft.com/en-us/windows/wsl/compare-versions
 Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 <br>
 <br>
 Earlier versions: - <br>
-https://learn.microsoft.com/en-us/windows/wsl/install-manual
-
+<font size="6"><a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual">https://learn.microsoft.com/en-us/windows/wsl/install-manual</a></font>
 
 ---
 
@@ -265,8 +264,10 @@ wsl --unregister sqlserver2019</pre></code>
 
 ---
 
-## Running SQL Server in WSL
+# Running SQL Server in WSL
 <!-- .slide: style="text-align: left;"> -->
+
+---
 
 <p align="center">
   <img src="images/sqlserver_error_wsl.png" />
@@ -280,7 +281,7 @@ wsl --unregister sqlserver2019</pre></code>
 <p align="center">
   <img src="images/systemd_in_wsl.png" />
 </p>
-https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/
+<font size="6"><a href="https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/">https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/</a></font>
 
 ---
 
