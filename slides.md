@@ -30,6 +30,13 @@ To dive into Windows Subsystem for Linux
 
 ---
 
+<p align="center">
+  <img src="images/test.png" />
+</p>
+
+
+---
+
 ## Why WSL?
 <!-- .slide: style="text-align: left;"> -->
 - Take advantage of linux commands on Windows<br>
