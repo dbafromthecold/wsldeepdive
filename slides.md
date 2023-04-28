@@ -68,6 +68,9 @@ https://learn.microsoft.com/en-us/windows/wsl/compare-versions
 
 ## WSL v2 architecture
 <!-- .slide: style="text-align: left;"> -->
+<p align="center">
+  <img src="images/wsl2_architecture_diagram.png" />
+</p>
 
 ---
 
