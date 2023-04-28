@@ -43,7 +43,16 @@ To dive into Windows Subsystem for Linux
 
 ## History of WSL
 <!-- .slide: style="text-align: left;"> -->
-TBD
+- August 2016 - WSL Beta - Bash on Ubuntu on Windows
+  + Only Ubuntu available
+- October 2017 - WSL no longer beta
+  + Multiple distros available
+- May 2019 - WSL 2 announced
+  + Shipped with Windows 10 version 2004
+- April 2021 - Ability to run Linux GUI apps announced
+- October 2021 - Windows store version released
+- November 2021 - version 1.0.0 released
+  + Support for Windows 10
 
 ---
 
@@ -54,7 +63,7 @@ TBD
   <img src="images/wsl1_vs_wsl2.png" />
 </p>
 
-https://learn.microsoft.com/en-us/windows/wsl/compare-versions
+<font size="6"><a href="https://learn.microsoft.com/en-us/windows/wsl/compare-versions">https://learn.microsoft.com/en-us/windows/wsl/compare-versions</a></font>
 
 ---
 
@@ -79,7 +88,7 @@ https://learn.microsoft.com/en-us/windows/wsl/compare-versions
 Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 <br>
 <br>
 Earlier versions: - <br>
-<font size="6"><a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual">https://learn.microsoft.com/en-us/windows/wsl/install-manual</a></font>
+<font size="4"><a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual">https://learn.microsoft.com/en-us/windows/wsl/install-manual</a></font>
 
 ---
 
@@ -116,8 +125,13 @@ Jump into a distro: -
 ## Configuring WSL
 <!-- .slide: style="text-align: left;"> -->
 
-- .wslconfig - system wide configuration
-- wsl.conf - per-distro configuration
+* .wslconfig
+  + system wide configuration
+  + located in user home directory on host
+- wsl.conf
+  + per-distro configuration
+  + located in /etc/ directory in distros
+
 
 ---
 
@@ -147,13 +161,12 @@ appendWindowsPath=true #add windows $PATH to WSL $PATH</pre><code>
 
 ---
 
-## Working with WSL
+## Accessing WSL filesystem from Windows
 <!-- .slide: style="text-align: left;"> -->
 
----
-
-## Running Docker in WSL
-<!-- .slide: style="text-align: left;"> -->
+<p align="center">
+  <img src="images/accessing_wsl_file_explorer.png" />
+</p>
 
 ---
 
@@ -287,7 +300,7 @@ wsl --unregister sqlserver2019</pre></code>
 ## Running SQL Server in WSL
 <!-- .slide: style="text-align: left;"> -->
 
-Create /etc/wsl.conf and add: -
+Create <i>/etc/wsl.conf</i> and add: -
 <pre><code>[boot]
 systemd=true</pre></code>
 
@@ -348,12 +361,10 @@ sudo /opt/mssql/bin/mssql-conf setup</pre></code>
 
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
-<font size="6">
+<font size="4">
 <a href="https://github.com/dbafromthecold/wsldeepdive">https://github.com/dbafromthecold/wsldeepdive</a><br>
-<a href="https://tinyurl.com/4fu2jh3e/running-sql-server-in-windows-subsystem-for-linux-wsl/">https://tinyurl.com/4fu2jh3e/running-sql-server-in-windows-subsystem-for-linux-wsl/</a><br>
-<a href="https://tinyurl.com/4jfr7p8n/converting-a-sql-server-docker-image-to-a-wsl2-distribution/">https://tinyurl.com/4jfr7p8n/converting-a-sql-server-docker-image-to-a-wsl2-distribution/e</a>
+<br>
+<a href="https://dbafromthecold.com/2022/09/27/running-sql-server-in-windows-subsystem-for-linux-wsl/">https://dbafromthecold.com/2022/09/27/running-sql-server-in-windows-subsystem-for-linux-wsl/</a><br>
+<br>
+<a href="https://dbafromthecold.com/2021/04/13/converting-a-sql-server-docker-image-to-a-wsl2-distribution/">https://dbafromthecold.com/2021/04/13/converting-a-sql-server-docker-image-to-a-wsl2-distribution/</a>
 </font>
-
-<p align="center">
-<img src="images/wsl_qr_code.png" />
-</p>
