@@ -164,7 +164,7 @@ appendWindowsPath=true #add windows $PATH to WSL $PATH</pre><code>
 
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
-<pre><code data-line-numbers="1|3|5|7|9|11">>FROM ubuntu:20.04
+<pre><code data-line-numbers="1|3|5|7|9|11">FROM ubuntu:20.04
  
 RUN apt-get update && apt-get install -y wget software-properties-common apt-transport-https
  
@@ -180,7 +180,7 @@ CMD /opt/mssql/bin/sqlservr</pre></code>
 
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
-<pre><code data-line-numbers="1|3|4|5-6|7|8">>docker build -t sqlserver2019 .
+<pre><code data-line-numbers="1|3|4|5-6|7|8">docker build -t sqlserver2019 .
 
 docker container run -d `
 --publish 1433:1433 `
@@ -193,7 +193,7 @@ sqlserver2019</pre></code>
 
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
-<pre><code data-line-numbers="1|3|5">>docker stop sqlcontainer1
+<pre><code data-line-numbers="1|3|5">docker stop sqlcontainer1
 
 docker export sqlcontainer1 -o C:\temp\sqlcontainer1.tar
 
@@ -203,7 +203,7 @@ wsl --import sqlserver2019 C:\wsl-distros\sqlserver2019 C:\temp\sqlcontainer1.ta
 
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
-<pre><code data-line-numbers="1|3|5">>docker stop sqlcontainer1
+<pre><code data-line-numbers="1|3|5">docker stop sqlcontainer1
 
 docker export sqlcontainer1 -o C:\temp\sqlcontainer1.tar
 
@@ -280,7 +280,7 @@ wsl --unregister sqlserver2019</pre></code>
 <p align="center">
   <img src="images/systemd_in_wsl.png" />
 </p>
-<font size="6"><a href="https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/">https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/</a></font>
+<font size="4"><a href="https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/">https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/</a></font>
 
 ---
 
@@ -294,6 +294,11 @@ systemd=true</pre></code>
 Restart WSL: -
 <pre><code>wsl --shutdown</pre></code>
 
+---
+
+## Running SQL Server in WSL
+<!-- .slide: style="text-align: left;"> -->
+
 Confirm: -
 <pre><code>systemctl list-unit-files --type=service</pre></code>
 
@@ -306,7 +311,7 @@ Confirm: -
 ## Running SQL Server in WSL
 <!-- .slide: style="text-align: left;"> -->
 
-<pre><<code data-line-numbers="1|3|5|7|9">>sudo apt update && sudo apt upgrade
+<pre><code data-line-numbers="1|3|5|7|9|11">sudo apt update && sudo apt upgrade
 	
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
@@ -314,14 +319,11 @@ sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubunt
 
 sudo apt-get update
 
-sudo apt-get install -y mssql-server</pre></code>
+sudo apt-get install -y mssql-server
+
+sudo /opt/mssql/bin/mssql-conf setup</pre></code>
 
 ---
-
-## Running SQL Server in WSL
-<!-- .slide: style="text-align: left;"> -->
-
-<pre><code>sudo /opt/mssql/bin/mssql-conf setup</pre></code>
 
 <p align="center">
   <img src="images/mssqlconf_in_wsl.png" />
@@ -345,5 +347,13 @@ sudo apt-get install -y mssql-server</pre></code>
 ---
 
 ## Resources
+<!-- .slide: style="text-align: left;"> -->
+<font size="6">
+<a href="https://github.com/dbafromthecold/wsldeepdive">https://github.com/dbafromthecold/wsldeepdive</a><br>
+<a href="https://tinyurl.com/4fu2jh3e/running-sql-server-in-windows-subsystem-for-linux-wsl/">https://tinyurl.com/4fu2jh3e/running-sql-server-in-windows-subsystem-for-linux-wsl/</a><br>
+<a href="https://tinyurl.com/4jfr7p8n/converting-a-sql-server-docker-image-to-a-wsl2-distribution/">https://tinyurl.com/4jfr7p8n/converting-a-sql-server-docker-image-to-a-wsl2-distribution/e</a>
+</font>
 
-
+<p align="center">
+<img src="images/wsl_qr_code.png" />
+</p>
