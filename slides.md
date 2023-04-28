@@ -363,8 +363,6 @@ sudo /opt/mssql/bin/mssql-conf setup</pre></code>
 <!-- .slide: style="text-align: left;"> -->
 <font size="4">
 <a href="https://github.com/dbafromthecold/wsldeepdive">https://github.com/dbafromthecold/wsldeepdive</a><br>
-<br>
 <a href="https://dbafromthecold.com/2022/09/27/running-sql-server-in-windows-subsystem-for-linux-wsl/">https://dbafromthecold.com/2022/09/27/running-sql-server-in-windows-subsystem-for-linux-wsl/</a><br>
-<br>
 <a href="https://dbafromthecold.com/2021/04/13/converting-a-sql-server-docker-image-to-a-wsl2-distribution/">https://dbafromthecold.com/2021/04/13/converting-a-sql-server-docker-image-to-a-wsl2-distribution/</a>
 </font>
