@@ -166,7 +166,7 @@ appendWindowsPath=true #add windows $PATH to WSL $PATH</pre><code>
 
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
-<pre><code>FROM ubuntu:20.04
+<pre><code data-line-numbers="1|3|5|7|9|11">>FROM ubuntu:20.04
  
 RUN apt-get update && apt-get install -y wget software-properties-common apt-transport-https
  
@@ -182,7 +182,7 @@ CMD /opt/mssql/bin/sqlservr</pre></code>
 
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
-<pre><code>docker build -t sqlserver2019 .
+<pre><code data-line-numbers="1|3|4|5-6|7|8">>docker build -t sqlserver2019 .
 
 docker container run -d `
 --publish 1433:1433 `
@@ -195,7 +195,7 @@ sqlserver2019</pre></code>
 
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
-<pre><code>docker stop sqlcontainer1
+<pre><code data-line-numbers="1|3|5">>docker stop sqlcontainer1
 
 docker export sqlcontainer1 -o C:\temp\sqlcontainer1.tar
 
@@ -205,7 +205,7 @@ wsl --import sqlserver2019 C:\wsl-distros\sqlserver2019 C:\temp\sqlcontainer1.ta
 
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
-<pre><code>docker stop sqlcontainer1
+<pre><code data-line-numbers="1|3|5">>docker stop sqlcontainer1
 
 docker export sqlcontainer1 -o C:\temp\sqlcontainer1.tar
 
@@ -251,7 +251,7 @@ wsl --list --verbose</pre></code>
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
 
-<pre><code>wsl -t sqlserver2019
+<pre><code data-line-numbers="1|3">wsl -t sqlserver2019
 
 wsl --unregister sqlserver2019</pre></code>
 
