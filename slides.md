@@ -31,7 +31,7 @@ To dive into Windows Subsystem for Linux
 ---
 
 <p align="center">
-  <img src="images/wsl1_architecture_diagram.png" />
+  <img src="images/wsl1_architecture.png" />
 </p>
 
 
