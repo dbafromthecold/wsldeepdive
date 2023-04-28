@@ -115,10 +115,9 @@ Jump into a distro: -
 
 ## Configuring WSL
 <!-- .slide: style="text-align: left;"> -->
-wsl.conf - per-distro configuration
 
-.wslconfig - system wide configuration
-
+- .wslconfig - system wide configuration
+- wsl.conf - per-distro configuration
 
 ---
 
