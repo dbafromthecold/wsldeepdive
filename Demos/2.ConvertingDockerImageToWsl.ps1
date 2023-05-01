@@ -60,7 +60,7 @@ docker container ls -a
 # rename the instance in the container: –
 mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
  
-mssql-cli -S localhost -U sa -P Testing1122 -Q "sp_dropserver [46e6105d5e48];"
+mssql-cli -S localhost -U sa -P Testing1122 -Q "sp_dropserver [b3909955d2af];"
  
 mssql-cli -S localhost -U sa -P Testing1122 -Q "sp_addserver [sqlserver2019], local;"
 
@@ -99,7 +99,12 @@ wsl --import sqlserver2019 C:\wsl-distros\sqlserver2019 C:\temp\sqlcontainer1.ta
 # confirm that the new distro is in WSL2: –
 wsl --list --verbose
 
- 
+
+
+# remove container
+docker container rm sqlcontainer1
+
+
 
 # we’re going to use the setsid command to start up SQL here, 
 # if we didn’t…the SQL log would write to our current session and we’d have to open up another powershell window
@@ -118,8 +123,13 @@ wsl -d sqlserver2019 ps aux
 
 
 
+# try viewing systemd process
+wsl -d sqlserver2019 systemctl status mssql-server
+
+
+
 # connect to SQL running in the distro: -
-mssql-cli -S 127.0.0.1 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME"
+mssql-cli -S 127.0.0.1 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName]"
 
 
 
@@ -128,5 +138,15 @@ wsl -t sqlserver2019
 
 
 
+# confirm: -
+wsl --list --verbose
+
+
+
 # remove the new distro completely: –
 wsl --unregister sqlserver2019
+
+
+
+# confirm: -
+wsl --list --verbose

@@ -12,6 +12,15 @@
 
 
 
+# jump into WSL
+wsl
+
+
+
+# view wsl.conf
+cat /etc/wsl.conf
+
+
 # create wsl.conf file and add in: -
 [boot]
 systemd=true
@@ -50,9 +59,14 @@ sudo /opt/mssql/bin/mssql-conf setup
 
 
 # confirm SQL Server is running: –
-systemctl status mssqlserver
+systemctl status mssql-server
 
 
 
 # also confirm the processes running by: –
 ps aux | grep mssql
+
+
+
+# connect to sqlserver
+mssql-cli -S 127.0.0.1 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName]"
