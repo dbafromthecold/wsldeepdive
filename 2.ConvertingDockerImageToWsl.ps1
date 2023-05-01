@@ -15,20 +15,30 @@
 # dockerfile for the custom SQL Docker image: –
 FROM ubuntu:20.04
  
-RUN apt-get update &amp;&amp; apt-get install -y wget software-properties-common apt-transport-https
+RUN apt-get update && apt-get install -y wget software-properties-common apt-transport-https
  
 RUN wget -qO- https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
  
 RUN add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
  
-RUN apt-get update &amp;&amp; apt-get install -y mssql-server
+RUN apt-get update && apt-get install -y mssql-server
  
 CMD /opt/mssql/bin/sqlservr
 
 
 
-#build the image: –
+# navigate to dockerfile
+cd C:\git\dbafromthecold\wsldeepdive\dockerfile
+
+
+
+# build the image: –
 docker build -t sqlserver2019 .
+
+
+
+# view the image
+docker image ls
 
 
 
@@ -43,14 +53,14 @@ sqlserver2019
 
 
 # confirm that the container is running: –
-docker container ls
+docker container ls -a
 
 
 
 # rename the instance in the container: –
 mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
  
-mssql-cli -S localhost -U sa -P Testing1122 -Q "sp_dropserver [8622203f7381];"
+mssql-cli -S localhost -U sa -P Testing1122 -Q "sp_dropserver [46e6105d5e48];"
  
 mssql-cli -S localhost -U sa -P Testing1122 -Q "sp_addserver [sqlserver2019], local;"
 
