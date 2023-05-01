@@ -44,7 +44,6 @@ To dive into Windows Subsystem for Linux
 ## History of WSL
 <!-- .slide: style="text-align: left;"> -->
 - August 2016 - WSL Beta - Bash on Ubuntu on Windows
-  + Only Ubuntu available
 - October 2017 - WSL no longer beta
   + Multiple distros available
 - May 2019 - WSL 2 announced
@@ -161,7 +160,7 @@ appendWindowsPath=true #add windows $PATH to WSL $PATH</pre><code>
 
 ---
 
-## Accessing WSL filesystem from Windows
+## Accessing WSL filesystem
 <!-- .slide: style="text-align: left;"> -->
 
 <p align="center">
@@ -361,7 +360,7 @@ sudo /opt/mssql/bin/mssql-conf setup</pre></code>
 
 ## Resources
 <!-- .slide: style="text-align: left;"> -->
-<font size="4">
+<font size="5">
 <a href="https://github.com/dbafromthecold/wsldeepdive">https://github.com/dbafromthecold/wsldeepdive</a><br>
 <a href="https://dbafromthecold.com/2022/09/27/running-sql-server-in-windows-subsystem-for-linux-wsl/">https://dbafromthecold.com/2022/09/27/running-sql-server-in-windows-subsystem-for-linux-wsl/</a><br>
 <a href="https://dbafromthecold.com/2021/04/13/converting-a-sql-server-docker-image-to-a-wsl2-distribution/">https://dbafromthecold.com/2021/04/13/converting-a-sql-server-docker-image-to-a-wsl2-distribution/</a>
