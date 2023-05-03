@@ -29,6 +29,11 @@ wsl --list --online
 
 
 
+# list available wsl distros with winget
+winget search wsl
+
+
+
 # list installed WSL distros
 wsl --list --verbose
 
@@ -41,6 +46,11 @@ wsl
 
 # confirm distro
 cat /etc/os-release
+
+
+
+# open file explorer in current location
+explorer.exe .
 
 
 
