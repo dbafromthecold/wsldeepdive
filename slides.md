@@ -95,7 +95,7 @@ To dive into Windows Subsystem for Linux
 ## WSL v2 architecture
 <!-- .slide: style="text-align: left;"> -->
 <p align="center">
-  <img src="images/wsl2_architecture_diagram.png" />
+  <img src="images/wsl2_architecture.png" />
 </p>
 
 ---
@@ -105,7 +105,7 @@ To dive into Windows Subsystem for Linux
 Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11 <br>
 <br>
 Earlier versions: - <br>
-<font size="4"><a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual">https://learn.microsoft.com/en-us/windows/wsl/install-manual</a></font>
+<font size="6"><a href="https://learn.microsoft.com/en-us/windows/wsl/install-manual">https://learn.microsoft.com/en-us/windows/wsl/install-manual</a></font>
 
 ---
 
@@ -118,8 +118,6 @@ Earlier versions: - <br>
 </p>
 
 <pre><code>wsl --install -d Ubuntu-22.04</pre></code>
-
-Note - Ubuntu is installed by default if no distro specified
 
 ---
 
@@ -373,3 +371,7 @@ sudo /opt/mssql/bin/mssql-conf setup</pre></code>
 <a href="https://dbafromthecold.com/2022/09/27/running-sql-server-in-windows-subsystem-for-linux-wsl/">https://dbafromthecold.com/2022/09/27/running-sql-server-in-windows-subsystem-for-linux-wsl/</a><br>
 <a href="https://dbafromthecold.com/2021/04/13/converting-a-sql-server-docker-image-to-a-wsl2-distribution/">https://dbafromthecold.com/2021/04/13/converting-a-sql-server-docker-image-to-a-wsl2-distribution/</a>
 </font>
+<br>
+<p align="center">
+  <img src="images/wsl_qr_code.png" />
+</p>
