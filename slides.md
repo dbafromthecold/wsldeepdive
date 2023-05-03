@@ -51,7 +51,7 @@ To dive into Windows Subsystem for Linux
   + Shipped with Windows 10 version 2004
 - April 2021 - Ability to run Linux GUI apps announced
 - October 2021 - Windows store version released
-- November 2021 - version 1.0.0 released
+- November 2022 - version 1.0.0 released
   + Support for Windows 10
 
 ---
