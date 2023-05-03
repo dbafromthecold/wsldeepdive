@@ -7,8 +7,7 @@
 <img src="images/apruski.jpg" style="float: right"/>
 
 ### Field Solutions Architect
-### Microsoft Data Platform MVP 
-### Certified Kubernetes Administrator
+### Microsoft Data Platform MVP
 
 <!-- .slide: style="text-align: left;"> -->
 <i class="fab fa-twitter"></i><a href="https://twitter.com/dbafromthecold">  @dbafromthecold</a><br>
