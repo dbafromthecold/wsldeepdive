@@ -83,7 +83,7 @@ wsl -d Ubuntu-20.04 tail ~/.bashrc | clip.exe
 ipconfig /all
 
 
-
+wsl -d Ubuntu-20.04 ip a
 # view ip a in WSL
 wsl -d Ubuntu-20.04 ip route
 

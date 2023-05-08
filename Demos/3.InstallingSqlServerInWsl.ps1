@@ -69,4 +69,5 @@ ps aux | grep mssql
 
 
 # connect to sqlserver
+exit
 mssql-cli -S 127.0.0.1 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName]"

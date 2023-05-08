@@ -44,7 +44,7 @@ docker image ls
 
 # run a container from the new custom image: –
 docker container run -d `
---publish 1433:1433 `
+--publish 15789:1433 `
 --env ACCEPT_EULA=Y `
 --env MSSQL_SA_PASSWORD=Testing1122 `
 --name sqlcontainer1 `
@@ -58,26 +58,36 @@ docker container ls -a
 
 
 # rename the instance in the container: –
-mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
  
-mssql-cli -S localhost -U sa -P Testing1122 -Q "sp_dropserver [e69928d64f0e];"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_dropserver [166bec4c550b];"
  
-mssql-cli -S localhost -U sa -P Testing1122 -Q "sp_addserver [sqlserver2019], local;"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_addserver [sqlserver2019], local;"
 
 
 
 # confirm the rename has been successful: –
 docker stop sqlcontainer1
- 
+
+docker container ls
+
+docker container ls -a
+
 docker start sqlcontainer1
 
-mssql-cli -S localhost -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
+docker container ls
+
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
 
 
 
 # stop the container again: –
 docker stop sqlcontainer1
 
+
+
+# confirm
+docker container ls -a
 
 
 # export the container to a tar file: –
@@ -119,7 +129,7 @@ wsl --list --verbose
 
 
 # confirm SQL Server is running: -
-wsl -d sqlserver2019 ps aux
+wsl -d sqlserver2019 bash -c "ps aux | grep mssql"
 
 
 
@@ -129,7 +139,7 @@ wsl -d sqlserver2019 systemctl status mssql-server
 
 
 # connect to SQL running in the distro: -
-mssql-cli -S 127.0.0.1 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName]"
+mssql-cli -S 127.0.0.1 -U sa -P Allington1122 -Q "SELECT @@SERVERNAME AS [InstanceName]"
 
 
 
