@@ -155,7 +155,7 @@ Jump into a distro: -
 memory=4GB
 processors=2
 swap=6GB
-swapfile=C:\\Temp\wslswap.vhdx</pre><code>
+swapfile=C:\\Temp\\wslswap.vhdx</pre><code>
 
 ---
 
