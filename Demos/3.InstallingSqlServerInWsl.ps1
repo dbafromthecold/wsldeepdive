@@ -53,6 +53,11 @@ sudo apt-get install -y mssql-server
 
 
 
+# enable sql server service (this is for demo purposes and is not needed on a normal install)
+sudo systemctl enable mssql-server
+
+
+
 # configure SQL Server with mssql-conf: –
 sudo /opt/mssql/bin/mssql-conf setup
 
@@ -71,3 +76,9 @@ ps aux | grep mssql
 # connect to sqlserver
 exit
 mssql-cli -S 127.0.0.1 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName]"
+
+
+
+# shutdown and disable SQL Server (for this demo only)
+wsl -d Ubuntu-20.04 sudo systemctl stop mssql-server
+wsl -d Ubuntu-20.04 sudo systemctl disable mssql-server

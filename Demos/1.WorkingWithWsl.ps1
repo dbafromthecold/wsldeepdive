@@ -33,6 +33,11 @@ winget search wsl
 
 
 # list installed WSL distros
+wsl --list
+
+
+
+# get more info
 wsl --list --verbose
 
 
@@ -71,9 +76,13 @@ wsl -d Ubuntu-20.04 tail ~/.bashrc | clip.exe
 ipconfig /all
 
 
-wsl -d Ubuntu-20.04 ip a
-# view ip a in WSL
-wsl -d Ubuntu-20.04 ip route
 
+# view ip info in WSL
+wsl -d Ubuntu-20.04 ip a
+
+
+
+# view ip route in WSL
+wsl -d Ubuntu-20.04 ip route
 
 
