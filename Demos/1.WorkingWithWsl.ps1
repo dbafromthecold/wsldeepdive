@@ -12,10 +12,8 @@
 
 
 
-# list all available WSL commands
-wsl --help > help.txt
-notepad help.txt
-rm help.txt
+# view wsl version
+wsl --version
 
 
 
@@ -56,16 +54,6 @@ explorer.exe .
 
 # exit distro
 exit
-
-
-
-# view vscode config
-notepad C:\Users\dbafromthecold\AppData\Roaming\Code\User\settings.json
-
-
-
-# view terminal config
-notepad C:\Users\dbafromthecold\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json;
 
 
 

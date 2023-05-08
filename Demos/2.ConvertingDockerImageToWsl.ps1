@@ -57,10 +57,10 @@ docker container ls -a
 
 
 
-# rename the instance in the container: –
+# rename the instance in the container (could have used the --hostname flag when running the container): –
 mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
  
-mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_dropserver [166bec4c550b];"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_dropserver [66012e167fb0];"
  
 mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_addserver [sqlserver2019], local;"
 
@@ -95,7 +95,12 @@ docker export sqlcontainer1 -o C:\temp\sqlcontainer1.tar
 
 
 
-# import it into WSL2: –
+# confirm file
+ls C:\temp
+
+
+
+# import it into WSL2 (this can take a while): –
 wsl --import sqlserver2019 C:\wsl-distros\sqlserver2019 C:\temp\sqlcontainer1.tar --version 2
 
 # what the code above is doing…
@@ -108,6 +113,11 @@ wsl --import sqlserver2019 C:\wsl-distros\sqlserver2019 C:\temp\sqlcontainer1.ta
 
 # confirm that the new distro is in WSL2: –
 wsl --list --verbose
+
+
+
+# view distro files on disk
+ls C:\wsl-distros\sqlserver2019
 
 
 
@@ -139,7 +149,7 @@ wsl -d sqlserver2019 systemctl status mssql-server
 
 
 # connect to SQL running in the distro: -
-mssql-cli -S 127.0.0.1 -U sa -P Allington1122 -Q "SELECT @@SERVERNAME AS [InstanceName]"
+mssql-cli -S 127.0.0.1 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName]"
 
 
 
