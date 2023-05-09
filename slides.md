@@ -193,13 +193,13 @@ appendWindowsPath=true #add windows $PATH to WSL $PATH</pre><code>
 <!-- .slide: style="text-align: left;"> -->
 <pre><code data-line-numbers="1|3|5|7|9|11">FROM ubuntu:20.04
  
-RUN apt-get update && apt-get install -y wget software-properties-common apt-transport-https
+RUN apt update && apt install -y wget software-properties-common apt-transport-https
  
 RUN wget -qO- https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
  
 RUN add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
  
-RUN apt-get update &amp;&amp; apt-get install -y mssql-server
+RUN apt update && apt install -y mssql-server
  
 CMD /opt/mssql/bin/sqlservr</pre></code>
 
@@ -334,9 +334,9 @@ wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
 sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2022.list)"
 
-sudo apt-get update
+sudo apt update
 
-sudo apt-get install -y mssql-server
+sudo apt install -y mssql-server
 
 sudo /opt/mssql/bin/mssql-conf setup</pre></code>
 
