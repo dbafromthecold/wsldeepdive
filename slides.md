@@ -189,6 +189,10 @@ appendWindowsPath=true #add windows $PATH to WSL $PATH</pre><code>
 
 ---
 
+# Converting a Docker Image to WSL
+
+---
+
 ## Converting a Docker Image to WSL
 <!-- .slide: style="text-align: left;"> -->
 <pre><code data-line-numbers="1|3|5|7|9|11">FROM ubuntu:20.04
