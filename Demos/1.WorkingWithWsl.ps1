@@ -68,7 +68,7 @@ wsl -d Ubuntu-20.04 -- cat /etc/hosts
 
 
 # clip from WSL
-wsl -d Ubuntu-20.04 tail ~/.bashrc | clip.exe
+wsl -d Ubuntu-20.04 -- tail ~/.bashrc | clip.exe
 
 
 

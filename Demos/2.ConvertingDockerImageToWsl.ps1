@@ -60,7 +60,7 @@ docker container ls -a
 # rename the instance in the container (could have used the --hostname flag when running the container): –
 mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
  
-mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_dropserver [66012e167fb0];"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_dropserver [b8842195488a];"
  
 mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_addserver [sqlserver2019], local;"
 

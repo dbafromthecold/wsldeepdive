@@ -28,11 +28,13 @@ systemd=true
 
 
 # exit out of WSL and then run: –
+exit
 wsl --shutdown
 
 
 
 # jump back into WSL and confirm systemd is running: –
+wsl
 systemctl list-unit-files --type=service
 
 
