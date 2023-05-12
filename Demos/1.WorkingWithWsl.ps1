@@ -52,6 +52,11 @@ cat /etc/os-release
 
 
 
+# view wsl.conf
+cat /etc/wsl.conf
+
+
+
 # open file explorer in current location
 explorer.exe .
 
