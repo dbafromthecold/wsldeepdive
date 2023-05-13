@@ -64,9 +64,13 @@ sudo systemctl enable mssql-server
 sudo /opt/mssql/bin/mssql-conf setup
 
 
+# check sql server is active
+sudo systemctl is-active mssql-server
 
-# confirm SQL Server is running: –
-systemctl status mssql-server
+
+
+# confirm: –
+sudo systemctl status mssql-server
 
 
 

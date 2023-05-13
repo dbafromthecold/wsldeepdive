@@ -14,7 +14,7 @@
 
 # dockerfile for the custom SQL Docker image: –
 FROM ubuntu:20.04
- 
+
 RUN apt-get update && apt-get install -y wget software-properties-common apt-transport-https
  
 RUN wget -qO- https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
@@ -60,7 +60,7 @@ docker container ls -a
 # rename the instance in the container (could have used the --hostname flag when running the container): –
 mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [InstanceName];"
  
-mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_dropserver [adf3d1d35088];"
+mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_dropserver [<<INSTANCENAME>>];"
  
 mssql-cli -S localhost,15789 -U sa -P Testing1122 -Q "sp_addserver [sqlserver2019], local;"
 
@@ -129,7 +129,7 @@ docker container rm sqlcontainer1
 # we’re going to use the setsid command to start up SQL here, 
 # if we didn’t…the SQL log would write to our current session and we’d have to open up another powershell window
 # start the distro: -
-wsl -d sqlserver2019 bash -c "setsid /opt/mssql/bin/sqlservr"
+wsl -d sqlserver2019-bkup bash -c "setsid /opt/mssql/bin/sqlservr"
 
 
 
@@ -139,12 +139,12 @@ wsl --list --verbose
 
 
 # confirm SQL Server is running: -
-wsl -d sqlserver2019 bash -c "ps aux | grep mssql"
+wsl -d sqlserver2019-bkup bash -c "ps aux | grep mssql"
 
 
 
 # try viewing systemd process
-wsl -d sqlserver2019 systemctl status mssql-server
+wsl -d sqlserver2019-bkup systemctl status mssql-server
 
 
 
@@ -154,7 +154,7 @@ mssql-cli -S 127.0.0.1 -U sa -P Testing1122 -Q "SELECT @@SERVERNAME AS [Instance
 
 
 # close down the distro with: –
-wsl -t sqlserver2019
+wsl -t sqlserver2019-bkup
 
 
 
